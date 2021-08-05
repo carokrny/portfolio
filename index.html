@@ -13,12 +13,13 @@
         <nav>
             <h2><a class="nav-link" href="#projects">projects</a></h2>
             <h2><a class="nav-link" href="#about">about</a></h2>
+            <h2><a class="nav-link" href="#skills">skills</a></h2>
             <h2><a class="nav-link" href="#contact">contact</a></h2>
         </nav>
     </header>
     <main>
-        <article id="landing">
-            <section class="split-screen" id="intro">
+        <article class="row-flex" id="landing">
+            <section class="split-screen col-flex" id="intro">
                 <h1>Learning by building.</h1>
                 <p><span class="emphasis">Hi! I'm Carolyn Kearney.</span> I'm an engineer based in San Francisco. I'm learning fullstack web development as I recover from a brain injury. Take a look around at the stuff I've built!</p>
             </section>
@@ -27,10 +28,10 @@
             </section>
         </article>
         <hr>
-        <article id="projects">
+        <article class="row-flex" id="projects">
             <h2 class="section-title">&#171; projects &#187;</h2>
             <section class="project-container">
-                <section class="bkg-img" id="fortune">
+                <section class="bkg-img row-flex" id="fortune">
                     <a id="fortune-link" href="https://carokrny.github.io/fortune_teller/" target="_blank">&#x1F517;</a>
                 </section>
                 <h2 class="project-title"><a href="https://github.com/carokrny/fortune_teller" target="_blank">fortune teller</a></h2>
@@ -38,7 +39,7 @@
                 <h3>Javascript, HTML, CSS</h3>
             </section>
             <section class="project-container">
-                <section class="bkg-img" id="trivia">
+                <section class="bkg-img  row-flex" id="trivia">
                     <a id="fortune-link" href="https://carokrny.github.io/trivia_club/" target="_blank">&#x1F517;</a>
                 </section>
                 <h2 class="project-title"><a href="https://github.com/carokrny/trivia_club" target="_blank">trivia club</a></h2>
@@ -46,7 +47,7 @@
                 <h3>HTML, CSS</h3>
             </section>
             <section class="project-container">
-                <section class="bkg-img" id="excursion">
+                <section class="bkg-img  row-flex" id="excursion">
                     <a id="fortune-link" href="https://carokrny.github.io/excursion/" target="_blank">&#x1F517;</a>
                 </section>
                 <h2 class="project-title"><a href="https://github.com/carokrny/excursion" target="_blank">excursion</a></h2>
@@ -54,7 +55,7 @@
                 <h3>HTML, CSS</h3>
             </section>
             <section class="project-container">
-                <section class="bkg-img" id="cheatsheet">
+                <section class="bkg-img  row-flex" id="cheatsheet">
                     <a id="fortune-link" href="https://carokrny.github.io/html-cheatsheet/" target="_blank">&#x1F517;</a>
                 </section>
                 <h2 class="project-title"><a href="https://github.com/carokrny/html-cheatsheet" target="_blank">html cheatsheet</a></h2>
@@ -63,12 +64,12 @@
             </section>
         </article>
         <hr>
-        <article id="about">
-            <section class="split-screen" id="about-left">
+        <article class="row-flex" id="about">
+            <section class="split-screen col-flex" id="about-left">
                 <h2 class="section-title">&#171; about &#187;</h2>
                 <img class="circle-img" id="headshot" src="media/about/circle_bw.JPG" alt="headshot of Carolyn Kearney">
             </section>
-            <section class="split-screen" id="about-right">
+            <section class="split-screen col-flex" id="about-right">
                 <p><strong>Hi! I'm Carolyn.</strong> I am learning to code. I graduated summa cum laude from Penn in 2018 with a degree in Materials Science & Engineering. I then passed the patent bar and practiced patent law for two years.</p>
                 <p>In January 2020 I was in an accident, in August 2020 I had brain surgery, and I've been slowly recovering ever since. I'm now visually impaired. I can't see depth, motion, or read very well, which makes practicing patent law hard. So I'm using adaptive technologies to learn to code.</p>
                 <p>I started learning to code in July 2021. Computer science isn't totally new to me, I took two years of object-oriented programming in high school and some computer science classes in college. It feels good to get back into it.</p>
@@ -76,19 +77,88 @@
             </section>
         </article>
         <hr>
+        <article id="skills">
+            <h2 class="section-title">&#171; skills &#187;</h2>
+            <section class="row-flex" id="skills-flex">
+                <section class="skill-container row-flex">
+                    <img src="media/skills/C++.png" alt="">
+                    <section class="skills-info col-flex">
+                        <h3>C++</h3>
+                        <p>intermediate</p>
+                    </section>
+                </section>
+                <section class="skill-container row-flex">
+                    <img src="media/skills/java.png" alt="">
+                    <section class="skills-info col-flex">
+                        <h3>Java</h3>
+                        <p>intermediate</p>
+                    </section>
+                </section>
+                <section class="skill-container row-flex">
+                    <img src="media/skills/javascript.png" alt="">
+                    <section class="skills-info col-flex">
+                        <h3>JavaScript</h3>
+                        <p>intermediate</p>
+                    </section>
+                </section>
+                <section class="skill-container row-flex">
+                    <img src="media/skills/HTML5.png" alt="">
+                    <section class="skills-info col-flex">
+                        <h3>HTML 5</h3>
+                        <p>intermediate</p>
+                    </section>
+                </section>
+                <section class="skill-container row-flex">
+                    <img src="media/skills/CSS3.png" alt="">
+                    <section class="skills-info col-flex">
+                        <h3>CSS 3</h3>
+                        <p>intermediate</p>
+                    </section>
+                </section>
+                <section class="skill-container row-flex">
+                    <img src="media/skills/git.png" alt="">
+                    <section class="skills-info col-flex">
+                        <h3>Git</h3>
+                        <p>beginner</p>
+                    </section>
+                </section>
+                <section class="skill-container row-flex">
+                    <img src="media/skills/github.png" alt="">
+                    <section class="skills-info col-flex">
+                        <h3>GitHub</h3>
+                        <p>beginner</p>
+                    </section>
+                </section>
+                <section class="skill-container row-flex">
+                    <img src="media/skills/npm.png" alt="">
+                    <section class="skills-info col-flex">
+                        <h3>npm</h3>
+                        <p>beginner</p>
+                    </section>
+                </section>
+                <section class="skill-container row-flex">
+                    <img src="media/skills/nodejs.png" alt="">
+                    <section class="skills-info col-flex">
+                        <h3>Node.js</h3>
+                        <p>beginner</p>
+                    </section>
+                </section>
+            </section>
+        </article>
+        <hr>
         <article id="contact">
             <h2 class="section-title">&#171; contact &#187;</h2>
             <p>Shoot me an email at <strong>carolynkrny@gmail.com</strong> or connect with me below.</p>
-            <section class="contact-container">
-                <section class="contact-info">
+            <section class="row-flex">
+                <section class="contact-info col-flex">
                     <a href="https://www.linkedin.com/in/carolyn-kearney/" target="_blank"><img class="icon" src="media/contact/LinkedIn.jpeg" alt="LinkedIn icon"></a>
                     <p>LinkedIn</p>
                 </section>
-                <section class="contact-info">
+                <section class="contact-info col-flex">
                     <a href="https://github.com/carokrny" target="_blank"><img class="icon" src="media/contact/GitHub.png" alt="GitHub icon"></a>
                     <p>GitHub</p>
                 </section>
-                <section class="contact-info">
+                <section class="contact-info col-flex">
                     <a href="media/contact/CRK_Resume_S21.pdf" target="_blank"><img class="icon" src="media/contact/resume.png" alt="resume icon"></a>
                     <p>Resume</p>
                 </section>
