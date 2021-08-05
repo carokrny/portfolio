@@ -113,6 +113,13 @@ main {
 
 /* Portfolio Styling */
 
+.section-title {
+    width: 100%;
+    padding-top: 3rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
 #projects {
     display: flex;
     flex-wrap: wrap;
