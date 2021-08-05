@@ -82,16 +82,19 @@ main {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
-#headshot img {
-    width: 20rem;
-    height: 20rem;
+.circle-img {
     border-radius: 50%;
     object-fit: cover;
     opacity: 0.95;
+}
+
+#doodle {
+    width: 25rem;
+    height: 25rem;
 }
 
 #intro {
@@ -173,11 +176,29 @@ main {
 
 #about{
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
+#about-left {
+    width: 30%;
+    justify-content: space-evenly;
+}
+
+#about-left h2 {
+    padding-top: 0;
+}
+
+#about-right {
+    width: 70%;
+    justify-content: space-evenly;
+}
+
+#headshot {
+    width: 15rem;
+    height: 15rem;
+}
+
  #about p {
-    width: 80%;
+    width: 90%;
     margin-bottom: 1rem;
  }
