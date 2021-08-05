@@ -167,3 +167,17 @@ main {
 #cheatsheet {
     background-image: url('../media/portfolio/cheatsheet.png');
 }
+
+
+/* About section styling */
+
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ #about p {
+    width: 80%;
+    margin-bottom: 1rem;
+ }
