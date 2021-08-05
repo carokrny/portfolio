@@ -205,6 +205,7 @@ main {
  }
 
 
+
  /* Skills section styling */
  
 #skills-flex {
@@ -222,22 +223,21 @@ main {
 }
 
 
+
  /* Contact section styling */
 
 #contact p {
     text-align: center;
-    margin: 2rem 0 1rem 0;
 }
 
  .contact-info {
-    margin: 1rem 0;
-    width: 7rem;
+    margin: 1.5rem 0;
+    width: 5rem;
  }
 
  .icon {
      height: 3rem;
      width: 3rem;
-     margin: 0.5rem;
      border-radius: 10%;
  }
 
