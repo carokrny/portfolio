@@ -96,7 +96,7 @@ main {
 }
 
 .split-screen {
-    height: 95vh;
+    height: 35rem;
     padding-top: 6rem;
     padding-bottom: 6rem;
     width: 50%;
@@ -136,7 +136,7 @@ main {
 #projects {
     flex-wrap: wrap;
     justify-content: space-evenly;
-    margin-bottom: 3rem;;
+    margin-bottom: 3rem;
 }
 
 .project-container {
@@ -150,6 +150,11 @@ main {
     height: 20rem;
     background-position: top;
     background-size: cover;
+    background-color: black;
+}
+
+.bkg-img a {
+    display: none;
 }
 
 #projects a {
@@ -208,6 +213,10 @@ main {
 
  /* Skills section styling */
  
+#skills {
+    margin-bottom: 3rem;
+}
+
 #skills-flex {
     flex-wrap: wrap;
 }
