@@ -10,7 +10,7 @@ function addOverlay(event) {
     //change the display of the link symbol and add overlay
     if (event.type === 'mouseover') {
         document.getElementById(link_id).style.display = "block";
-        element.style.opacity = "0.5";
+        element.style.opacity = "0.4";
     } else if (event.type === 'mouseleave') {
         document.getElementById(link_id).style.display = "none";
         element.style.opacity = "1";
@@ -35,3 +35,5 @@ document.getElementById('fortune').addEventListener("mouseleave", addOverlay);
 document.getElementById('trivia').addEventListener("mouseleave", addOverlay);
 document.getElementById('excursion').addEventListener("mouseleave", addOverlay);
 document.getElementById('cheatsheet').addEventListener("mouseleave", addOverlay);
+
+
