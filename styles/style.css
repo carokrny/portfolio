@@ -66,6 +66,12 @@ header h2 {
     color:rgb(0, 34, 107);
 }
 
+@media only screen and (max-width: 560px) {
+    nav h2 {
+        font-size: 1rem;
+    }
+}
+
 
 
 /* Main styling */
@@ -103,7 +109,7 @@ main {
 }
 
 .split-screen {
-    height: 35rem;
+    min-height: 35rem;
     padding-top: 6rem;
     padding-bottom: 6rem;
     width: 50%;
@@ -134,6 +140,22 @@ main {
 .emphasis {
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+@media only screen and (max-width: 750px) {
+    #doodle {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    #intro {
+        margin-left: 4rem;
+    }
+
+    #intro h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+    }
 }
 
 
@@ -182,7 +204,7 @@ main {
     color: rgb(0, 34, 107);
 }
 
-#projects h2, h3, p {
+#projects h2, p {
     margin-top: 0.75rem;
 }
 
@@ -211,7 +233,25 @@ main {
 
  #about p {
     width: 90%;
-    margin-bottom: 1rem;
+ }
+
+ @media only screen and (max-width: 880px) {
+    #about-left {
+        width: 40%;
+        align-self: flex-start;
+    }
+
+    #about-left { 
+        width: 60%;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+ }
+
+ @media only screen and (max-width: 560px) {
+    #headshot {
+        width: 80%;
+     }
  }
 
 
@@ -224,6 +264,7 @@ main {
 
 #skills-flex {
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
  .skill-container {
@@ -234,6 +275,12 @@ main {
 .skills-info {
     align-items: flex-start;
     padding-left: 1rem;
+}
+
+@media only screen and (max-width: 750px) {
+    .skill-container { 
+        width: 40%;
+    }
 }
 
 
@@ -253,15 +300,4 @@ main {
      height: 3rem;
      width: 3rem;
      border-radius: 10%;
- }
-
-
-
- /* Footer styling */
-  
- footer {
-     width: 100%;
-     text-align: center;
-     font-size: 0.75rem;
-     padding: 1rem;
  }
