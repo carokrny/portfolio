@@ -72,6 +72,16 @@ header h2 {
     }
 }
 
+@media only screen and (max-width: 480px) {
+    header h2 {
+        padding: 0.5rem 0rem 0.5rem 1rem;
+    }
+
+    nav {
+        padding-right: 1rem;
+    }
+}
+
 
 
 /* Main styling */
@@ -155,6 +165,43 @@ main {
     #intro h1 {
         font-size: 3rem;
         margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    #doodle {
+        width: 12rem;
+        height: 20rem;
+    }
+
+    #intro {
+        margin-left: 2rem;
+    }
+
+    #intro h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #landing {
+        flex-direction: column-reverse;
+    }
+    
+    .split-screen {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        min-height: 12rem;
+    }
+
+    #doodle {
+        width: 15rem;
+        height: 15rem;        
+    }
+
+    #intro {
+        width: 80%;
+        padding-bottom: 3rem;
     }
 }
 
@@ -278,6 +325,7 @@ main {
  }
 
  @media only screen and (max-width: 560px) {
+    
     #about {
         flex-direction: column;
     }
@@ -294,8 +342,12 @@ main {
      }
 
      #about-right {
-         width: 100%;
+         width: 80%;
          padding-top: 2rem;
+     }
+     
+     #about p {
+         margin-bottom: 1.5rem;
      }
  }
 
@@ -313,11 +365,15 @@ main {
 }
 
  .skill-container {
-     width: 20rem;
-     padding: 2rem;
+    width: 20rem;
+    margin: 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
  }
 
 .skills-info {
+    display: inline-flex;
     align-items: flex-start;
     padding-left: 1rem;
 }
@@ -325,6 +381,19 @@ main {
 @media only screen and (max-width: 750px) {
     .skill-container { 
         width: 40%;
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .skill-container {
+        width: 30%;
+        flex-direction: column;
+    }
+
+    .skill-container img {
+        max-width: 100px;
+        max-height: 100px;
     }
 }
 
@@ -345,4 +414,11 @@ main {
      height: 3rem;
      width: 3rem;
      border-radius: 10%;
+ }
+
+
+ @media only screen and (max-width: 560px) {
+    #contact p {
+        width: 80%;
+    }
  }
