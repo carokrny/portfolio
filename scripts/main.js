@@ -4,16 +4,20 @@
 // when user mouses over a project image. 
 
 function addOverlay(event) {
-    var element = event.target
-    const element_id = element.id; 
+    //extract which element (which .img-grid container) the event occured within 
+    const element_id = event.target.id; 
+
+    //get names of children elements to modify (the link icon and background image)
     const link_id = `${element_id}-link`;
-    //change the display of the link symbol and add overlay
-    if (event.type === 'mouseover') {
+    const img_id = `${element_id}-img`;
+
+    //toggle the display of the link symbol and add overlay
+    if (event.type === 'mouseenter') {
         document.getElementById(link_id).style.display = "block";
-        element.style.opacity = "0.4";
+        document.getElementById(img_id).style.opacity = "0.4";
     } else if (event.type === 'mouseleave') {
         document.getElementById(link_id).style.display = "none";
-        element.style.opacity = "1";
+        document.getElementById(img_id).style.opacity = "1";
     } else {
         console.log('error');
         document.getElementById(link_id).style.display = "none";
@@ -24,13 +28,14 @@ function addOverlay(event) {
 
 // Create event listeners 
 
-// Mouse over 
-document.getElementById('fortune').addEventListener("mouseover", addOverlay);
-document.getElementById('trivia').addEventListener("mouseover", addOverlay);
-document.getElementById('excursion').addEventListener("mouseover", addOverlay);
-document.getElementById('cheatsheet').addEventListener("mouseover", addOverlay);
+// Mouse over portfolio image
+document.getElementById('fortune').addEventListener("mouseenter", addOverlay);
+document.getElementById('trivia').addEventListener("mouseenter", addOverlay);
+document.getElementById('excursion').addEventListener("mouseenter", addOverlay);
+document.getElementById('cheatsheet').addEventListener("mouseenter", addOverlay);
 
-// Mouse leave
+
+// Mouse leave portfolio image 
 document.getElementById('fortune').addEventListener("mouseleave", addOverlay);
 document.getElementById('trivia').addEventListener("mouseleave", addOverlay);
 document.getElementById('excursion').addEventListener("mouseleave", addOverlay);
