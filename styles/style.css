@@ -372,6 +372,11 @@ main {
     justify-content: center;
  }
 
+ .skill-container img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
 .skills-info {
     display: inline-flex;
     align-items: flex-start;
@@ -389,11 +394,6 @@ main {
     .skill-container {
         width: 30%;
         flex-direction: column;
-    }
-
-    .skill-container img {
-        max-width: 100px;
-        max-height: 100px;
     }
 }
 
