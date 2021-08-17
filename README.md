@@ -18,4 +18,4 @@ Created with:
 This project can be viewed at carokrny.github.io/portfolio or carolynkearney.me. 
 
 ## Acknowledgements 
-Thank you to ICONS8.com for free use of icons for my Skills and Contact section. And thank you to ezgif.com for helping me turn my doodle into a gif. 
+Thank you to ICONS8.com for free use of icons for my Skills and Contact section. And thank you to ezgif.com for helping me turn my doodle into a gif. Thank you to faviconit.com for the free favicon creator. 
