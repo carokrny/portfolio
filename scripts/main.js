@@ -33,7 +33,6 @@ document.getElementById('fortune').addEventListener("mouseenter", addOverlay);
 document.getElementById('trivia').addEventListener("mouseenter", addOverlay);
 document.getElementById('excursion').addEventListener("mouseenter", addOverlay);
 document.getElementById('hat').addEventListener("mouseenter", addOverlay);
-document.getElementById('cheatsheet').addEventListener("mouseenter", addOverlay);
 
 
 // Mouse leave portfolio image 
@@ -41,6 +40,5 @@ document.getElementById('fortune').addEventListener("mouseleave", addOverlay);
 document.getElementById('trivia').addEventListener("mouseleave", addOverlay);
 document.getElementById('excursion').addEventListener("mouseleave", addOverlay);
 document.getElementById('hat').addEventListener("mouseleave", addOverlay);
-document.getElementById('cheatsheet').addEventListener("mouseleave", addOverlay);
 
 
