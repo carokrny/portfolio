@@ -238,6 +238,10 @@ main {
     object-position: center;
 }
 
+#flashcards-img {
+    object-position: top;
+}
+
 .grid-link {
     display: none;
     height: 50px;
