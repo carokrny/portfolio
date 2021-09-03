@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/carombni/public_html/
-    - /bin/cp -R $DEPLOYPATH
+    - /bin/cp -r * $DEPLOYPATH
