@@ -328,6 +328,10 @@ main {
 
 /* About section styling */
 
+#about {
+    min-height: calc(100vh - 3.75rem);
+}
+
 #about-left {
     width: 30%;
     justify-content: space-evenly;
