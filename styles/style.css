@@ -41,7 +41,6 @@ img {
 /* Heading and Navigation styles */
 
 header {
-    background-color: rgb(255, 255, 254);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,6 +65,10 @@ header h2 {
 .nav-link {
     text-decoration: none;
     color:rgb(0, 34, 107);
+}
+
+.nav-link:hover {
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 560px) {
@@ -119,11 +122,17 @@ main {
 
 .section-title {
     width: 100%;
-    padding-top: 3rem;
+    padding-top: 4.5rem;
     text-align: center;
     font-size: 2rem;
 }
 
+hr {
+    border: none;
+    border-bottom: 1px dotted rgb(0, 34, 107);
+    margin-top: calc(-3.75rem + 2px);        /* Size of fixed header */
+    padding-bottom: calc(3.75rem - 2px); 
+}
 
 
 /* Landing page styling */
@@ -294,7 +303,7 @@ main {
     color: rgb(0, 34, 107);
 }
 
-#projects h2, p {
+#projects p {
     margin-top: 0.75rem;
 }
 
