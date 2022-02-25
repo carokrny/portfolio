@@ -3,9 +3,11 @@
 // Function to add an overlay and display link
 // when user mouses over a project image. 
 
-function addOverlay(event) {
+function toggleOverlay(event) {
     //extract which element (which .img-grid container) the event occured within 
     const element_id = event.target.id; 
+
+    console.log(element_id);
 
     //get names of children elements to modify (the link icon and background image)
     const link_id = `${element_id}-link`;
@@ -29,22 +31,22 @@ function addOverlay(event) {
 // Create event listeners 
 
 // Mouse over portfolio image
-document.getElementById('fortune').addEventListener("mouseenter", addOverlay);
-document.getElementById('reddit').addEventListener("mouseenter", addOverlay);
-document.getElementById('trivia').addEventListener("mouseenter", addOverlay);
-document.getElementById('jammming').addEventListener("mouseenter", addOverlay);
-document.getElementById('flashcards').addEventListener("mouseenter", addOverlay);
-document.getElementById('excursion').addEventListener("mouseenter", addOverlay);
-document.getElementById('hat').addEventListener("mouseenter", addOverlay);
+document.getElementById('fortune').addEventListener("mouseenter", toggleOverlay);
+document.getElementById('reddit').addEventListener("mouseenter", toggleOverlay);
+document.getElementById('trivia').addEventListener("mouseenter", toggleOverlay);
+document.getElementById('jammming').addEventListener("mouseenter", toggleOverlay);
+document.getElementById('flashcards').addEventListener("mouseenter", toggleOverlay);
+//document.getElementById('excursion').addEventListener("mouseenter", toggleOverlay);
+document.getElementById('hat').addEventListener("mouseenter", toggleOverlay);
 
 
 // Mouse leave portfolio image 
-document.getElementById('fortune').addEventListener("mouseleave", addOverlay);
-document.getElementById('reddit').addEventListener("mouseleave", addOverlay);
-document.getElementById('trivia').addEventListener("mouseleave", addOverlay);
-document.getElementById('jammming').addEventListener("mouseleave", addOverlay);
-document.getElementById('flashcards').addEventListener("mouseleave", addOverlay);
-document.getElementById('excursion').addEventListener("mouseleave", addOverlay);
-document.getElementById('hat').addEventListener("mouseleave", addOverlay);
+document.getElementById('fortune').addEventListener("mouseleave", toggleOverlay);
+document.getElementById('reddit').addEventListener("mouseleave", toggleOverlay);
+document.getElementById('trivia').addEventListener("mouseleave", toggleOverlay);
+document.getElementById('jammming').addEventListener("mouseleave", toggleOverlay);
+document.getElementById('flashcards').addEventListener("mouseleave", toggleOverlay);
+//document.getElementById('excursion').addEventListener("mouseleave", toggleOverlay);
+document.getElementById('hat').addEventListener("mouseleave", toggleOverlay);
 
 

@@ -7,17 +7,20 @@
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3t4Ck-L2qM2VQ.woff2) format('woff2');
     unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
-  }
-  /* latin */
-  @font-face {
+}
+/* latin */
+@font-face {
     font-family: 'Tenor Sans';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url(https://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3V4Ck-L2qM.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
+}
 
+
+/*-------------------------------------------------------------------------------------------------*/
+/* General HTML styling */
 html {
     font-size: 16px;
     font-family: 'Tenor Sans', sans-serif;
@@ -71,6 +74,7 @@ body {
 }
 
 
+/*-------------------------------------------------------------------------------------------------*/
 /* Heading and Navigation styles */
 
 header {
@@ -135,7 +139,7 @@ header h2 {
 }
 
 
-
+/*-------------------------------------------------------------------------------------------------*/
 /* Main styling */
 
 main {
@@ -143,11 +147,11 @@ main {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.875rem;
 }
 
 .row-flex {
@@ -167,7 +171,6 @@ h3 {
     width: 100%;
     padding-top: 4.5rem;
     text-align: center;
-    font-size: 2rem;
 }
 
 hr {
@@ -178,6 +181,7 @@ hr {
 }
 
 
+/*-------------------------------------------------------------------------------------------------*/
 /* Landing page styling */
 
 #landing {
@@ -280,27 +284,36 @@ hr {
     }
 }
 
-/* Portfolio Styling */
+
+/*-------------------------------------------------------------------------------------------------*/
+/* Project portfolio Styling */
 
 #projects {
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: stretch;
-    margin-bottom: 3rem;
+    /*flex-wrap: wrap;*/
+    margin-bottom: 7rem;
+}
+
+#projects p {
+    font-size: 1.2rem;
 }
 
 .project-container {
-    width: 40%;
-    margin-top: 3rem;
+    width: 70vw;
+    margin-top: 7rem;
     overflow: hidden;
 }
 
+.about-project {
+    width: 25vw;
+    padding-right: 1rem;
+}
+
 .img-grid {
-    width: 100%;
-    height: 20rem;
+    width: 45vw;
+    height: calc(45vw * 0.6);   /* width multiplied by imgage aspect ratio */
     display: inline-grid;
-    grid-template-columns: 1fr 50px 1fr;
-    grid-template-rows: 1fr 50px 1fr;
+    grid-template-columns: 1fr 5vw 1fr;
+    grid-template-rows: 1fr 5vw 1fr;
     background-color:white;
 }
 
@@ -309,6 +322,8 @@ hr {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    outline: 1px solid white;
+    outline-offset: -1px;
 }
 
 #flashcards-img {
@@ -317,9 +332,8 @@ hr {
 
 .grid-link {
     display: none;
-    height: 50px;
-    width: 50px;
-    background-color:rgb(0, 34, 107);
+    height: 5vw;
+    width: 5vw;
     border-radius: 20%;
     grid-area: 2 / 2 / span 1 / span 1;
     z-index: 2;
@@ -334,34 +348,35 @@ hr {
 }
 
 @media only screen and (max-width: 875px) {
+    #projects h3 {
+        font-size: 1.4rem;
+    }
+
+    #projects p {
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 585px) {
+    #projects .row-flex {
+        flex-direction: column-reverse;
+    }
+
+    .about-project {
+        width: 100%;
+        padding-top: 1rem;
+    }
+
     .img-grid {
-        height: 15rem;
+        width: 100%;
+        height: calc(70vw * 0.6);   /* width multiplied by imgage aspect ratio */
     }
 }
 
-@media only screen and (max-width: 760px) {
-    .project-container {
-        width: 70%;
-    }
 
-    .img-grid {
-        height: 20rem;
-    }
-}
-
-@media only screen and (max-width: 580px) {
-    .img-grid {
-        height: 15rem;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .img-grid {
-        height: 12rem;
-    }
-}
-
-
+/*-------------------------------------------------------------------------------------------------*/
 /* About section styling */
 
 #about {
@@ -450,8 +465,8 @@ hr {
  }
 
 
-
- /* Skills section styling */
+/*-------------------------------------------------------------------------------------------------*/
+/* Skills section styling */
  
 #skills {
     margin-bottom: 3rem;
@@ -503,8 +518,8 @@ hr {
 }
 
 
-
- /* Contact section styling */
+/*-------------------------------------------------------------------------------------------------*/
+/* Contact section styling */
 
 #contact {
     background-color: rgb(1, 18, 54);
