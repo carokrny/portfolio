@@ -154,6 +154,10 @@ h3 {
     font-size: 1.875rem;
 }
 
+p {
+    font-size: 1.2rem;
+}
+
 .row-flex {
     display: flex;
     align-items: center;
@@ -169,7 +173,8 @@ h3 {
 
 .section-title {
     width: 100%;
-    padding-top: 4.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
     text-align: center;
 }
 
@@ -209,12 +214,7 @@ hr {
     margin-bottom: 2rem;
 }
 
-#intro p {
-    font-size: 1.2rem;
-}
-
 .emphasis {
-    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -289,12 +289,19 @@ hr {
 /* Project portfolio Styling */
 
 #projects {
-    /*flex-wrap: wrap;*/
     margin-bottom: 7rem;
 }
 
+#projects h2 {
+    padding-bottom: 0;
+}
+
 #projects p {
-    font-size: 1.2rem;
+    margin-top: 0.75rem;
+}
+
+#projects a {
+    color: rgb(0, 34, 107);
 }
 
 .project-container {
@@ -339,15 +346,17 @@ hr {
     z-index: 2;
 }
 
-#projects a {
-    color: rgb(0, 34, 107);
+@media only screen and (min-width: 1000px) {
+    .project-container {
+        width: 65vw;
+    }
+    
+    .about-project {
+        width: 20vw;
+    }
 }
 
-#projects p {
-    margin-top: 0.75rem;
-}
-
-@media only screen and (max-width: 875px) {
+@media only screen and (max-width: 875px), (orientation: portrait) {
     #projects h3 {
         font-size: 1.4rem;
     }
@@ -407,7 +416,6 @@ hr {
 }
 
  #about p {
-    font-size: 1.1rem;
     margin-bottom: 2rem;
  }
 
@@ -444,6 +452,7 @@ hr {
      
     #about p {
         margin-bottom: 1.5rem;
+        font-size: 1rem;
     }
 }
 
@@ -452,7 +461,8 @@ hr {
 /* Skills section styling */
  
 #skills {
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 7rem;
 }
 
 #skills-flex {
@@ -461,7 +471,7 @@ hr {
 }
 
  .skill-container {
-    width: 20rem;
+    width: 25vw;
     margin: 2rem;
     display: inline-flex;
     align-items: center;
@@ -477,19 +487,26 @@ hr {
     display: inline-flex;
     align-items: flex-start;
     padding-left: 1rem;
-    width: 40%;
+    width: calc(25vw - 100px);
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 950px) {
+    #skills h3 {
+        font-size: 1.6rem;
+    }
+
     .skill-container { 
-        width: 40%;
-        margin: 1rem;
+        width: 33vw;
+    }
+
+    .skills-info {
+        width: calc(33vw - 100px);
     }
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 670px) {
     .skill-container {
-        width: 30%;
+        width: 30vw;
         flex-direction: column;
     }
 
@@ -507,34 +524,39 @@ hr {
 #contact {
     background-color: rgb(1, 18, 54);
     color:rgb(255, 255, 254);
+    padding-bottom: 2.5rem;
 }
 
 #contact h2 {
-    padding-top: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 
 #contact p {
+    font-size: 1rem;
     text-align: center;
+    width: 80%;
 }
 
-#contact strong {
-    text-decoration: underline;
+#contact a {
+    color: white;
+    font-weight: 600;
 }
 
- .contact-info {
-    margin: 1.5rem 0;
+.contact-info {
+    margin: 2rem 1rem;
     width: 5rem;
- }
+}
 
- .icon {
-     height: 3rem;
-     width: 3rem;
-     border-radius: 10%;
- }
+.icon {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 10%;
+}
 
 
- @media only screen and (max-width: 560px) {
+@media only screen and (max-width: 560px) {
     #contact p {
-        width: 80%;
+        font-size: 0.8rem;
     }
- }
+}
