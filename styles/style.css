@@ -381,88 +381,71 @@ hr {
 
 #about {
     min-height: calc(100vh - 3.75rem);
+    justify-content: space-evenly;
 }
 
 #about-left {
-    width: 30%;
+    width: 30vw;
     justify-content: space-evenly;
+    padding-bottom: 2rem;
 }
 
 #about-left h2 {
     padding-top: 0;
+    padding-bottom: 4rem;
 }
 
 #about-right {
-    width: 70%;
+    width: 45vw;
     justify-content: space-evenly;
+    padding-right: 5vw;
 }
 
 #headshot {
-    width: 15rem;
-    height: 15rem;
+    width: 20vw;
+    height: 20vw;
 }
 
  #about p {
-    width: 90%;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
  }
 
- @media only screen and (max-width: 880px) {
-    #about-left {
-        width: 40%;
-        align-self: flex-start;
+ @media only screen and (max-height: 640px), (orientation: landscape) {
+    #about-right {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
-
-    #about-right { 
-        width: 60%;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-
  }
 
- @media only screen and (max-width: 640px) {
-    
+ @media only screen and (max-width: 640px), (orientation: portrait) {
     #about {
         flex-direction: column;
+        justify-content: start;
     }
 
     #about-left {
         width: 100%;
-        min-height: 15rem;
-        padding-top: 3rem;
+        padding-top: 7rem;
         padding-bottom: 0rem;
-     }
+    }
 
-     #about-left h2 {
-         padding-bottom: 1.5rem;
-     }
+    #headshot {
+        width: 30vw;
+        height: 30vw;
+    }
 
-     #about-right {
-         width: 80%;
-         padding-top: 2rem;
-     }
+    #about-right {
+        width: 70vw;
+        padding-top: 5rem;
+        padding-right: 0;
+        padding-bottom: 5rem;
+    }
      
-     #about p {
-         margin-bottom: 1.5rem;
-     }
- }
-
- @media (orientation: portrait) and (min-width: 640px) {
-    #about-left {
-        width: 40%;
-        align-self: center;
+    #about p {
+        margin-bottom: 1.5rem;
     }
-
-    #about-left h2 {
-        margin-bottom: 2rem;
-    }
-
-    #about-right { 
-        width: 60%;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
- }
+}
 
 
 /*-------------------------------------------------------------------------------------------------*/
