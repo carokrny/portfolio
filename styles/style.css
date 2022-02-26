@@ -173,7 +173,7 @@ p {
 
 .section-title {
     width: 100%;
-    padding-top: 5rem;
+    padding-top: 7rem;
     padding-bottom: 5rem;
     text-align: center;
 }
@@ -183,6 +183,7 @@ hr {
     border-bottom: 1px dotted rgb(0, 34, 107);
     margin-top: calc(-3.75rem + 2px);        /* Size of fixed header */
     padding-bottom: calc(3.75rem - 2px); 
+    position: relative;
 }
 
 
@@ -289,11 +290,21 @@ hr {
 /* Project portfolio Styling */
 
 #projects {
-    margin-bottom: 7rem;
+    padding-bottom: 7rem;
+    padding-top: 7rem;
+    align-items: start;
+    justify-content: space-evenly;
+    position: relative;
+    min-height: 100vh;
 }
 
-#projects h2 {
-    padding-bottom: 0;
+#projects .section-title {
+    padding-top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 7rem;
+    width: 25vw;
+    text-align: center;
 }
 
 #projects p {
@@ -304,15 +315,20 @@ hr {
     color: rgb(0, 34, 107);
 }
 
-.project-container {
+.projects-column {
     width: 70vw;
-    margin-top: 7rem;
+}
+
+.project-container {
+    width: 100%;
+    padding-bottom: 7rem;
     overflow: hidden;
+    flex-direction: row-reverse;
 }
 
 .about-project {
     width: 25vw;
-    padding-right: 1rem;
+    padding-left: 1.5rem;
 }
 
 .img-grid {
@@ -347,7 +363,7 @@ hr {
 }
 
 @media only screen and (min-width: 1000px) {
-    .project-container {
+    .projects-column {
         width: 65vw;
     }
     
@@ -356,7 +372,7 @@ hr {
     }
 }
 
-@media only screen and (max-width: 875px), (orientation: portrait) {
+@media only screen and (max-width: 950px), (orientation: portrait) {
     #projects h3 {
         font-size: 1.4rem;
     }
@@ -366,20 +382,39 @@ hr {
         margin-top: 0.5rem;
     }
 
+    #projects .section-title {
+        font-size: 2rem;
+    }
 }
 
-@media only screen and (max-width: 585px) {
+@media only screen and (max-width: 770px) {
+
+    #projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #projects .section-title {
+        position: static;
+        width: 100%;
+    }
+
     #projects .row-flex {
         flex-direction: column-reverse;
     }
 
-    .about-project {
+    .projects-column {
         width: 100%;
+    }
+
+    .about-project {
+        width: 70vw;
         padding-top: 1rem;
+        padding-left: 0;
     }
 
     .img-grid {
-        width: 100%;
+        width: 70vw;
         height: calc(70vw * 0.6);   /* width multiplied by imgage aspect ratio */
     }
 }
@@ -394,20 +429,21 @@ hr {
 }
 
 #about-left {
-    width: 30vw;
+    width: 25vw;
     justify-content: space-evenly;
     padding-bottom: 2rem;
+    align-items: center;
 }
 
-#about-left h2 {
+#about-left .section-title {
     padding-top: 0;
     padding-bottom: 4rem;
 }
 
 #about-right {
-    width: 45vw;
+    width: 70vw;
     justify-content: space-evenly;
-    padding-right: 5vw;
+    align-items: center;
 }
 
 #headshot {
@@ -415,18 +451,25 @@ hr {
     height: 20vw;
 }
 
- #about p {
+#about p {
     margin-bottom: 2rem;
- }
+    width: 80%;
+}
 
- @media only screen and (max-height: 640px), (orientation: landscape) {
+@media only screen and (min-width: 1000px) {
+    #about-right  {
+        width: 65vw;
+    }
+}
+
+@media only screen and (max-height: 640px), (orientation: landscape) {
     #about-right {
         padding-top: 4rem;
         padding-bottom: 4rem;
     }
- }
+}
 
- @media only screen and (max-width: 640px), (orientation: portrait) {
+@media only screen and (max-width: 640px), (orientation: portrait) {
     #about {
         flex-direction: column;
         justify-content: start;
@@ -465,13 +508,18 @@ hr {
     margin-bottom: 7rem;
 }
 
+#skills h3 {
+    font-size: 1.6rem;
+}
+
 #skills-flex {
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    padding: 0 max(10vw, calc((100vw - 3*(300px + 2*2rem) - 2rem)/2));
 }
 
  .skill-container {
-    width: 25vw;
+    width: 260px;
+    height: 100px;
     margin: 2rem;
     display: inline-flex;
     align-items: center;
@@ -490,30 +538,37 @@ hr {
     width: calc(25vw - 100px);
 }
 
-@media only screen and (max-width: 950px) {
-    #skills h3 {
-        font-size: 1.6rem;
-    }
-
-    .skill-container { 
-        width: 33vw;
-    }
-
-    .skills-info {
-        width: calc(33vw - 100px);
-    }
-}
-
-@media only screen and (max-width: 670px) {
-    .skill-container {
-        width: 30vw;
-        flex-direction: column;
-    }
+@media only screen and (max-width: 1370px) {
 
     .skills-info {
         width: 100%;
         align-items: center;
         padding-left: 0;
+    }
+    
+    .skill-container {
+        width: 20vw;
+        min-height: min(30vw, 150px);
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    #skills-flex {
+        flex-wrap: wrap;
+        padding: 0 7vw;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    #skills-flex {
+        padding: 0 5vw;
+    }
+}
+
+@media only screen and (max-width: 330px) {
+    #skills-flex {
+        padding: 25px;
     }
 }
 
@@ -527,7 +582,7 @@ hr {
     padding-bottom: 2.5rem;
 }
 
-#contact h2 {
+#contact .section-title {
     padding-top: 3rem;
     padding-bottom: 2rem;
 }
