@@ -86,8 +86,9 @@ header {
     width: 100%;
     max-width: 100vw;
     height: 3.75rem;
-    z-index: 5;
+    z-index: 90;
     background-color: rgb(255, 255, 254);
+    box-shadow: 0px 2px 5px 1px rgb(230, 230, 229);
 }
 
 nav {
@@ -147,11 +148,11 @@ main {
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 2.125rem;
 }
 
 h3 {
-    font-size: 1.875rem;
+    font-size: 1.8rem;
 }
 
 p {
@@ -172,9 +173,6 @@ p {
 }
 
 .section-title {
-    width: 100%;
-    padding-top: 7rem;
-    padding-bottom: 5rem;
     text-align: center;
 }
 
@@ -191,7 +189,7 @@ p {
 
 hr {
     border: none;
-    border-bottom: 1px dotted rgb(0, 34, 107);
+    /*border-bottom: 1px dotted rgb(0, 34, 107);*/
     margin-top: calc(-3.75rem + 2px);        /* Size of fixed header */
     padding-bottom: calc(3.75rem - 2px); 
     position: relative;
@@ -326,7 +324,6 @@ hr {
 .project-container {
     width: 100%;
     padding-bottom: 7rem;
-    overflow: hidden;
 }
 
 .about-project {
@@ -348,8 +345,7 @@ hr {
     height: 100%;
     object-fit: cover;
     object-position: center;
-    outline: 1px solid rgb(255, 255, 254);
-    outline-offset: -1px;
+    box-shadow: 8px 8px 5px rgb(190, 190, 189);
 }
 
 #flashcards-img {
@@ -517,15 +513,14 @@ hr {
 
 #skills-flex {
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 80vw;
 }
 
 .skill-container {
     width: 260px;
     height: 95px;
-    /*margin: 1rem 2rem 1rem 0;*/
-    margin: 1rem 0;
+    margin: 1rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -533,6 +528,7 @@ hr {
     border-radius: 10px;
     padding-left: 10px;
     justify-content: start;
+    box-shadow: 5px 5px 5px rgb(210, 210, 209);
 }
 
 .skill-container h3 {
@@ -554,13 +550,7 @@ hr {
     padding-left: 10px;
 }
 
-#last-two{
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-evenly;
-}
-
-@media only screen and (max-width: 1150px) {
+@media only screen and (max-width: 1095px) {
     .skill-container {
         width: 230px; 
         height: 85px;
@@ -604,7 +594,7 @@ hr {
     .skill-container {
         width: 175px;
         height: 65px;
-        margin: 0.75rem 1.5rem 0.75rem 0;
+        margin: 0.75rem;
     }
 
     .skill-container img {
@@ -655,7 +645,7 @@ hr {
     .skill-container {
         width: 75px;
         height: 80px;
-        margin: 0.5rem 1rem 0.5rem 0;
+        margin: 0.5rem;
     }
 
     .skill-container img {
