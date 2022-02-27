@@ -36,7 +36,6 @@ document.getElementById('reddit').addEventListener("mouseenter", toggleOverlay);
 document.getElementById('trivia').addEventListener("mouseenter", toggleOverlay);
 document.getElementById('jammming').addEventListener("mouseenter", toggleOverlay);
 document.getElementById('flashcards').addEventListener("mouseenter", toggleOverlay);
-//document.getElementById('excursion').addEventListener("mouseenter", toggleOverlay);
 document.getElementById('hat').addEventListener("mouseenter", toggleOverlay);
 
 
@@ -46,7 +45,6 @@ document.getElementById('reddit').addEventListener("mouseleave", toggleOverlay);
 document.getElementById('trivia').addEventListener("mouseleave", toggleOverlay);
 document.getElementById('jammming').addEventListener("mouseleave", toggleOverlay);
 document.getElementById('flashcards').addEventListener("mouseleave", toggleOverlay);
-//document.getElementById('excursion').addEventListener("mouseleave", toggleOverlay);
 document.getElementById('hat').addEventListener("mouseleave", toggleOverlay);
 
 
