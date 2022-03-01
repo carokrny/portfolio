@@ -30,28 +30,30 @@
     <title>Carolyn Kearney</title>
 </head>
 <body>
-    <header>
-        <h2><a class="nav-link" href="index.html">CK</a></h2>
+    <header class="row-flex" id="header-nav">
+        <h2><a href="index.html">CK</a></h2>
         <nav>
-            <h2><a class="nav-link" href="#goto_projects">projects</a></h2>
-            <h2><a class="nav-link" href="#goto_about">about</a></h2>
-            <h2><a class="nav-link" href="#goto_skills">skills</a></h2>
-            <h2><a class="nav-link" href="#contact">contact</a></h2>
+            <ul class="row-flex">
+                <li><a href="#goto_projects">projects</a></li>
+                <li><a href="#goto_about">about</a></li>
+                <li><a href="#goto_skills">skills</a></li>
+                <li><a href="#contact">contact</a></li>
+            </ul>
         </nav>
     </header>
     <main>
         <article class="row-flex" id="landing">
             <section class="col-flex" id="intro">
                 <h1>Learning by building.</h1>
-                <p><span class="emphasis">Hi! I'm Carolyn Kearney.</span> I'm an engineer based in San Francisco. I'm learning fullstack development as I recover from a brain injury. Take a look around at the stuff I've built!</p>
+                <p><strong>Hi! I'm Carolyn Kearney.</strong> I'm an engineer based in San Francisco. I'm learning fullstack development as I recover from a brain injury. Take a look around at the stuff I've built!</p>
             </section>
             <section class="col-flex" id="doodle">
                 <img class="circle-img" id="doodle-circle" src="media/landing/doodle.gif" alt="animated doodle typing at computer">
             </section>
         </article>
         <hr id="goto_projects">
-        <article class="col-flex" id="projects">
-            <h2 class="section-title sticky-title">&#171; projects &#187;</h2>
+        <article class="row-flex" id="projects">
+            <h2 class="section-title sticky-title dark-background left-panel">&#171; projects &#187;</h2>
             <section class="col-flex" id="projects-col">
                 <section class="project-container row-flex">
                     <section class="about-project">
@@ -128,11 +130,11 @@
         </article>
         <hr id="goto_about">
         <article class="row-flex" id="about">
-            <section class="col-flex" id="about-left">
+            <section class="col-flex sticky-title dark-background right-panel" id="about-intro">
                 <h2 class="section-title">&#171; about &#187;</h2>
                 <img class="circle-img" id="headshot" src="media/about/circle_bw.JPG" alt="headshot of Carolyn Kearney">
             </section>
-            <section class="col-flex" id="about-right">
+            <section class="col-flex" id="about-text">
                 <p><strong>Hi! I'm Carolyn and I'm learning to code.</strong> I graduated summa cum laude from Penn in 2018 with a degree in Materials Science & Engineering. I then passed the patent bar and practiced patent law for two years.</p>
                 <p>In January 2020 I was in an accident, later had brain surgery, and I've been slowly recovering ever since. I'm now visually impaired. I can't see depth, motion, or read very well, which makes it hard to practice patent law. So I'm using adaptive technologies to learn to code!</p>
                 <p>I started learning fullstack development in July 2021. Computer science isn't totally new to me, I took two years of object-oriented programming in high school and some computer science classes in college. It feels good to get back into it.</p>
@@ -140,8 +142,8 @@
             </section>
         </article>
         <hr id="goto_skills">
-        <article class="col-flex" id="skills">
-            <h2 class="section-title sticky-title">&#171; skills &#187;</h2>
+        <article class="row-flex" id="skills">
+            <h2 class="section-title sticky-title dark-background left-panel">&#171; skills &#187;</h2>
             <section class="row-flex" id="skills-flex">
                 <section class="skill-container">
                     <img src="media/skills/C++.png" alt="">
