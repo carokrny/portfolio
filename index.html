@@ -43,19 +43,29 @@
     </header>
     <main>
         <article class="row-flex" id="landing">
-            <section class="col-flex" id="intro">
+            <!--
+            <div class="eclipse" id="first-eclipse"></div>
+            <div class="planet" id="first-planet"></div>
+            <div class="eclipse" id="second-eclipse"></div>
+            <div class="planet" id="second-planet"></div>
+            -->
+            <section class="split-screen col-flex" id="intro">
                 <h1>Learning by building.</h1>
-                <p><strong>Hi! I'm Carolyn Kearney.</strong> I'm an engineer based in San Francisco. I'm learning fullstack development as I recover from a brain injury. Take a look around at the stuff I've built!</p>
+                <p><strong>Hi! I'm <span class="highlight">Carolyn Kearney</span>.</strong> I'm an engineer based in San Francisco. I'm learning fullstack development as I recover from a brain injury. Take a look around at the stuff I've built!</p>
             </section>
-            <section class="col-flex" id="doodle">
+            <section class="split-screen col-flex" id="doodle">
+                
                 <img class="circle-img" id="doodle-circle" src="media/landing/doodle.gif" alt="animated doodle typing at computer">
             </section>
         </article>
         <hr id="goto_projects">
-        <article class="row-flex" id="projects">
-            <h2 class="section-title sticky-title dark-background left-panel">&#171; projects &#187;</h2>
+        <article class="col-flex " id="projects">
+            <div class="col-flex sticky-panel right-panel">
+                <h2 class="section-title">&#171; projects &#187;</h2> 
+                <div id="gradient-shadow"></div>
+            </div>
             <section class="col-flex" id="projects-col">
-                <section class="project-container row-flex">
+                <section class="project-container">
                     <section class="about-project">
                         <h3 class="project-title">fortune teller</h3>
                         <p>Creates a fortune from multiple randomized sub-strings from 6,804 unique combinations</p>
@@ -67,7 +77,7 @@
                         <a class="grid-link" id="fortune-link" href="https://carokrny.github.io/fortune_teller/" title="Fortune Teller on GitHub Pages" target="_blank"><img src="media/portfolio/link.png" alt="Fortune Teller project website"></a>
                     </section>
                 </section>
-                <section class="project-container row-flex">
+                <section class="project-container">
                     <section class="about-project">
                         <h3 class="project-title">reddit float</h3>
                         <p>Frontend Reddit client optimized for users with mild visual impairments</p>
@@ -79,7 +89,7 @@
                         <a class="grid-link" id="reddit-link" href="https://reddit-float.netlify.app" title="Reddit Float on Netlify" target="_blank"><img src="media/portfolio/link.png" alt="reddit float project website"></a>
                     </section>
                 </section>
-                <section class="project-container row-flex">
+                <section class="project-container">
                     <section class="about-project">
                         <h3 class="project-title">jammming</h3>
                         <p>React web app to allow users to preview songs, create playlists, and save the playlists to their Spotify</p>
@@ -91,7 +101,7 @@
                         <a class="grid-link" id="jammming-link" href="https://jammming-crk.surge.sh" title="Jammming on Surge" target="_blank"><img src="media/portfolio/link.png" alt="jammming project website"></a>
                     </section>
                 </section>
-                <section class="project-container row-flex">
+                <section class="project-container">
                     <section class="about-project">
                         <h3 class="project-title">flashcards</h3>
                         <p>React front-end web app that enables a user to define topics and make flashcard quizzes</p>
@@ -103,7 +113,7 @@
                         <a class="grid-link" id="flashcards-link" href="https://flashcards-react.netlify.app" title="Flashcards on Netlify" target="_blank"><img src="media/portfolio/link.png" alt="flashcards project website"></a>
                     </section>
                 </section>
-                <section class="project-container row-flex">
+                <section class="project-container">
                     <section class="about-project">
                         <h3 class="project-title">trivia club</h3>
                         <p>Responsive website for a faux trivia club that developed intermediate HTML and CSS skills </p>
@@ -115,7 +125,7 @@
                         <a class="grid-link" id="trivia-link" href="https://carokrny.github.io/trivia_club/" title="Trivia Club on GitHub Pages" target="_blank"><img src="media/portfolio/link.png" alt="trivia club project website"></a>
                     </section>
                 </section>
-                <section class="project-container row-flex">
+                <section class="project-container">
                     <section class="about-project">
                         <h3 class="project-title">find my hat</h3>
                         <p>Terminal maze game to find a hat with a maze solver and terminal styling</p>
@@ -130,10 +140,10 @@
         </article>
         <hr id="goto_about">
         <article class="row-flex" id="about">
-            <section class="col-flex sticky-title dark-background right-panel" id="about-intro">
+            <div class="col-flex left-panel">
                 <h2 class="section-title">&#171; about &#187;</h2>
                 <img class="circle-img" id="headshot" src="media/about/circle_bw.JPG" alt="headshot of Carolyn Kearney">
-            </section>
+            </div> 
             <section class="col-flex" id="about-text">
                 <p><strong>Hi! I'm Carolyn and I'm learning to code.</strong> I graduated summa cum laude from Penn in 2018 with a degree in Materials Science & Engineering. I then passed the patent bar and practiced patent law for two years.</p>
                 <p>In January 2020 I was in an accident, later had brain surgery, and I've been slowly recovering ever since. I'm now visually impaired. I can't see depth, motion, or read very well, which makes it hard to practice patent law. So I'm using adaptive technologies to learn to code!</p>
@@ -142,8 +152,8 @@
             </section>
         </article>
         <hr id="goto_skills">
-        <article class="row-flex" id="skills">
-            <h2 class="section-title sticky-title dark-background left-panel">&#171; skills &#187;</h2>
+        <article class="col-flex" id="skills">
+            <h2 class="section-title">&#171; skills &#187;</h2>
             <section class="row-flex" id="skills-flex">
                 <section class="skill-container">
                     <img src="media/skills/C++.png" alt="">
