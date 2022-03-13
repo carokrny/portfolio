@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/style.css" type="text/css" rel="stylesheet">
     <script type="module" src="scripts/projects_hover.js"></script>
+    <script type="module" src="scripts/hamburger.js"></script>
     <!-- <script type="module" src="scripts/header_hover.js"></script> -->
 	<link rel="shortcut icon" href="/media/favicon/favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="/media/favicon/favicon.ico">
@@ -31,9 +32,11 @@
 </head>
 <body>
     <header class="row-flex" id="header-nav">
-        <h2><a href="index.html">CK</a></h2>
+        <h2><a href="#landing" id="logo">CK</a></h2>
         <nav>
-            <ul class="row-flex">
+            <button type="button" name="menu" id="hamburger">&#9776;</button>
+            <ul class="col-flex" id="links">
+                <li><a href="#landing">home</a></li>
                 <li><a href="#goto_projects">projects</a></li>
                 <li><a href="#goto_about">about</a></li>
                 <li><a href="#goto_skills">skills</a></li>
@@ -54,7 +57,6 @@
                 <p><strong>Hi! I'm <span class="highlight">Carolyn Kearney</span>.</strong> I'm an engineer based in San Francisco. I'm learning fullstack development as I recover from a brain injury. Take a look around at the stuff I've built!</p>
             </section>
             <section class="split-screen col-flex" id="doodle">
-                
                 <img class="circle-img" id="doodle-circle" src="media/landing/doodle.gif" alt="animated doodle typing at computer">
             </section>
         </article>
