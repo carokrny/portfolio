@@ -506,6 +506,15 @@ header li:hover {
     grid-template-rows: 1fr 5vw 1fr;
     margin: 0 calc(calc(100% - 35vw - 45vw)*0.5);
     background-color: #FFFFFE;
+    transition: all 1s;
+}
+
+.img-grid:hover .bkg-img {
+    opacity: 0.4;
+}
+
+.img-grid:hover .grid-link {
+    display: block;
 }
 
 .bkg-img {
@@ -515,10 +524,6 @@ header li:hover {
     object-position: center;
 }
 
-#flashcards-img {
-    object-position: top;
-}
-
 .grid-link {
     display: none;
     height: 5vw;
@@ -526,6 +531,10 @@ header li:hover {
     border-radius: 20%;
     grid-area: 2 / 2 / span 1 / span 1;
     z-index: 2;
+}
+
+#flashcards-img {
+    object-position: top;
 }
 
 @media only screen and (orientation: portrait) {
