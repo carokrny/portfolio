@@ -207,6 +207,14 @@ main {
     }
 }
 
+@media only screen and (orientation: portrait) {
+    .sticky-panel {
+        width: 100%;
+        /*top: 2.9rem;*/
+        left: 0;
+    }
+}
+
 hr {
     border: none;
     margin-top: calc(-2.9rem + 2px);        /* Size of fixed header */
@@ -317,8 +325,12 @@ header li:hover .highlight {
     */
 }
 
+#landing-top {
+    height: 85vh;
+}
+
 #intro {
-    padding-left: 5vw;
+    padding-left: 10vw;
     padding-top: 2.9rem;
     align-items: start;
     z-index: 5;
@@ -346,6 +358,22 @@ header li:hover .highlight {
     /*background-color: #fffffe5d;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 20px 15px #fffffe5d;*/
+}
+
+#landing-bottom {
+    height: calc(100vh - 2.9rem - 85vh);
+    width: 80vw;
+    justify-content: space-between;
+    border-top: #00226B 3px solid;
+}
+
+#landing-bottom h2 {
+    /* min font-size: 12px */
+    font-size: calc(0.75rem + 0.5vw);
+}
+
+#landing-bottom h2:hover .highlight {
+    background-size: 100% 100%;
 }
 
 .planet, .eclipse {
@@ -399,9 +427,18 @@ header li:hover .highlight {
 */
 
 @media (orientation: portrait) {
-    #landing {
+    #landing-top {
         flex-direction: column-reverse;     /* put doodle on top*/
         justify-content: center;
+        height: 100%;
+    }
+
+    .split-screen {
+        width: 70vw;
+    }
+
+    #landing-bottom {
+        display: none;
     }
 
     #doodle {
@@ -416,7 +453,7 @@ header li:hover .highlight {
     }
 
     #intro {
-        width: 70vw;
+        padding-left: 0;
     }
 
     #intro h1 {
@@ -428,8 +465,8 @@ header li:hover .highlight {
 
 @media only screen and (max-width: 250px), (max-height: 380px) {
     #doodle {
-        width: min(70vw, 50vh);
-        max-height: 40vh;
+        width: min(70vw, 45vh);
+        max-height: 45vh;
         padding-bottom: 0;
     }
 }
@@ -513,10 +550,10 @@ header li:hover .highlight {
 .img-grid {
     width: 35vw;
     height: calc(35vw * 0.6);   
+    margin: 0 calc(calc(100% - 35vw - 45vw)*0.5);
     display: inline-grid;
     grid-template-columns: 1fr 5vw 1fr;
     grid-template-rows: 1fr 5vw 1fr;
-    margin: 0 calc(calc(100% - 35vw - 45vw)*0.5);
     background-color: #FFFFFE;
     transition: all 1s;
 }
@@ -551,12 +588,9 @@ header li:hover .highlight {
 
 @media only screen and (orientation: portrait) {
     #projects .sticky-panel {
-        width: 100%;
-        top: 2.9rem;
-        left: 0;
         height: 20vh;
     }
-
+    
     #projects .section-title {
         height: 10vh;
         padding-top: 5vh;
@@ -574,14 +608,15 @@ header li:hover .highlight {
     }
 
     .about-project {
-        width: 80%;
+        width: 80vw;
         top: 65vh;
         padding-top: 2rem;
     }
 
     .img-grid {
-        width: 100%;
-        height: auto;
+        width: 80vw;
+        height: calc(80vw * 0.6);   
+        margin: 0;
     }
     
 }
@@ -615,7 +650,7 @@ header li:hover .highlight {
     justify-content: space-evenly;
     align-items: center;
     padding-left: calc(calc(100vw - 35vw - 50vw)* 0.5);
-    border-left: #00226B solid 5px;
+    border-left: #00226B solid 3px;
 }
 
 #about-text:hover .highlight {
@@ -636,12 +671,17 @@ header li:hover .highlight {
         flex-direction: column;
     }
 
-    #about .sticky-panel {
-        width: 100%;
+    #about .left-panel {
+        width: 80vw;
         height: auto;
         margin: 0;
         position: static;
         padding-bottom: 1rem;
+    }
+
+    #about .sticky-panel {
+        width: 100%;
+        
     }
 
     #headshot {
@@ -674,7 +714,7 @@ header li:hover .highlight {
 #skills .section-title {
     width: 80%;
     padding: 3rem 0 2rem 0;
-    border-top: #00226B solid 5px;
+    border-top: #00226B solid 3px;
 }
 
 #skills-flex {
