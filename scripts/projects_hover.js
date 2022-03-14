@@ -7,8 +7,6 @@ function toggleOverlay(event) {
     //extract which element (which .img-grid container) the event occured within 
     const element_id = event.target.id; 
 
-    console.log(element_id);
-
     //get names of children elements to modify (the link icon and background image)
     const link_id = `${element_id}-link`;
     const img_id = `${element_id}-img`;
