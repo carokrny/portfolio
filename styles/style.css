@@ -172,6 +172,15 @@ main {
     /*box-shadow: -3px 3px 3px 0 rgb(1, 18, 54);*/
 }
 
+.highlight {
+    text-decoration: none;
+    background-image: linear-gradient(to right, #ffe25ff5 0, #ffe25ff5 100%);
+    background-size: 0% 150%;
+    background-position: 0;
+    background-repeat: no-repeat;
+    transition: background .5s;
+}
+
 .smooth-shadow {
     box-shadow: 2px 4px 2px rgba(0,0,0,0.02),
                 4px 8px 6px rgba(0,0,0,0.04),
@@ -278,8 +287,8 @@ header li a {
     line-height: 2;
 }
 
-header li:hover {
-    text-decoration: underline;
+header li:hover .highlight {
+    background-size: 100% 100%;
 }
 
 
@@ -320,13 +329,9 @@ header li:hover {
     margin-bottom: 5vh;
 }
 
-/*
-.highlight{ 
-    background: #FFD073EA;
-    box-shadow: 0 0 5px calc(calc(0.625rem + 0.5vw)*0.2) #ffd073c5,
-                0 0 10px calc(calc(0.625rem + 0.5vw)*0.2) #FFD073EA;
+#intro:hover .highlight {
+    background-size: 100% 100%;
 }
-*/
 
 #doodle {
     padding-bottom: 2rem;
@@ -342,8 +347,6 @@ header li:hover {
     backdrop-filter: blur(10px);
     box-shadow: 0 0 20px 15px #fffffe5d;*/
 }
-
-
 
 .planet, .eclipse {
     position: absolute;
@@ -490,12 +493,21 @@ header li:hover {
 
 .about-project p {
     margin-top: calc(calc(0.25rem + 1vw)*0.75);
+    width: fit-content;
 }
 
 .about-project h3 {
     /* min font-size: 12px */
     font-size: calc(0.75rem + 3vw);
     line-height: 1.5;
+}
+
+.about-project a {
+    text-decoration: underline;
+}
+
+.about-project p:hover .highlight {
+    background-size: 100% 100%;
 }
 
 .img-grid {
@@ -604,6 +616,10 @@ header li:hover {
     align-items: center;
     padding-left: calc(calc(100vw - 35vw - 50vw)* 0.5);
     border-left: #00226B solid 5px;
+}
+
+#about-text:hover .highlight {
+    background-size: 100% 100%;
 }
 
 #headshot {
@@ -735,9 +751,8 @@ header li:hover {
 /* Contact section styling */
 
 #contact {
-    background-color: rgb(1, 18, 54);
-    color:rgb(255, 255, 254);
-    padding-bottom: calc(calc(0.25rem + 1vw)*3);
+    background-color: #011236;
+    color:#FFFFFE;
 }
 
 #contact .section-title {
@@ -751,9 +766,15 @@ header li:hover {
     padding-bottom: 1rem;
 }
 
+#contact:hover .highlight {
+    background-size: 100% 100%;
+    color:#011236;
+}
+
 #contact a {
-    color: rgb(255, 255, 254);
+    color: #FFFFFE;
     font-weight: 600;
+    text-decoration: underline;
 }
 
 .contact-info {
