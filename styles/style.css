@@ -103,12 +103,12 @@ img {
     -moz-box-sizing: border-box;
 }
 
-/*-------------------------------------------------------------------------------------------------*/
-/* Main styling */
-
 main {
     margin-top: 0;
 }
+
+/*-------------------------------------------------------------------------------------------------*/
+/* re-used class styling */
 
 .row-flex {
     display: flex;
@@ -130,8 +130,8 @@ main {
 .section-title {
     text-align: center;
     padding-top: 15vh;
-    font-family: 'spinwerad', 'Tenor Sans', sans-serif;
-    letter-spacing: 3px;
+    /*font-family: 'spinwerad', 'Tenor Sans', sans-serif;
+    letter-spacing: 3px;*/
 }
 
 .sticky-panel {
@@ -164,12 +164,10 @@ main {
 
 .left-panel{
     justify-self: start;
-    /*box-shadow: 3px 3px 3px 0 #011236;*/
 }
 
 .right-panel {
     justify-self: end;
-    /*box-shadow: -3px 3px 3px 0 rgb(1, 18, 54);*/
 }
 
 .highlight {
@@ -195,6 +193,28 @@ main {
                 8px 16px 10px rgba(0,0,0,0.04),
                 16px 24px 18px rgba(0,0,0,0.09);
 
+}
+
+.reveal {
+    transform: translateY(20vh);
+    opacity: 0;
+    transition: fade-bottom 2s all ease;
+}
+
+.reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.hide {
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.hide.active{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 @media only screen and (max-width: 320px) {
@@ -295,7 +315,8 @@ header li a {
     line-height: 2;
 }
 
-header li:hover .highlight {
+header li:hover .highlight, 
+header li:focus .highlight {
     background-size: 100% 100%;
 }
 
@@ -319,10 +340,7 @@ header li:hover .highlight {
     justify-content: space-evenly;
     overflow: hidden;
     padding-bottom: 2rem;
-    /*
-    background: linear-gradient(90deg, #C2E0EB 0%, #C2E0EB00 50%), 
-                linear-gradient(270deg, #F6A57A 0%, #F6A57A00 50%);
-    */
+    margin-bottom: 20vh;
 }
 
 #landing-top {
@@ -341,7 +359,8 @@ header li:hover .highlight {
     margin-bottom: 5vh;
 }
 
-#intro:hover .highlight {
+#intro:hover .highlight, 
+#intro:focus .highlight {
     background-size: 100% 100%;
 }
 
@@ -355,9 +374,6 @@ header li:hover .highlight {
     border-radius: 50%;
     object-fit: cover;
     z-index: 5;
-    /*background-color: #fffffe5d;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px 15px #fffffe5d;*/
 }
 
 #landing-bottom {
@@ -372,59 +388,11 @@ header li:hover .highlight {
     font-size: calc(0.75rem + 0.5vw);
 }
 
-#landing-bottom h2:hover .highlight {
+#landing-bottom h2:hover .highlight, 
+#landing-bottom h2:focus .highlight {
     background-size: 100% 100%;
 }
 
-.planet, .eclipse {
-    position: absolute;
-    border-radius: 50%;
-}
-
-/*
-#first-planet {
-    width: 36vw;
-    height: 36vw;
-    left: calc(0vw);
-    top: calc(-5vh);
-    background: radial-gradient(circle, #FA6F3F 10%, #AF63CF 80%, #af63cf00 100%);
-    filter: blur(60px);
-    opacity: 0.7;
-}
-
-#first-eclipse {
-    width: 50vw;
-    height: 50vw;
-    left: calc(-13vw);
-    top: calc(-18vh);
-    background: radial-gradient(circle, #2D275D 10%, #AF63CF 80%, #af63cf00 100%),
-                radial-gradient(circle, #2D275D 10%, #AF63CF 80%, #af63cf00 100%);
-    filter: blur(60px);
-    opacity: 0.2;
-}
-
-
-#second-planet {
-    width: 46vw;
-    height: 46vw;
-    left: 55vw;
-    top: 30vh;
-    background: linear-gradient(145deg, #f34223 0%, #FFE485 80%);
-    filter: blur(20px);
-    opacity: 0.4;
-}
-
-#second-eclipse {
-    width: 80vw;
-    height: 80vw;
-    left: 45vw;
-    top: 18vh;
-    background: linear-gradient(30deg, #AF63CF 30%, #FA6F3F 60%, #AF63CF 90%), 
-                linear-gradient(30deg, #AF63CF 30%, #FA6F3F 60%, #AF63CF 90%);
-    opacity: 0.5;
-    filter: blur(60px);
-}
-*/
 
 @media (orientation: portrait) {
     #landing-top {
@@ -493,8 +461,9 @@ header li:hover .highlight {
 #projects .section-title {
     width: 100%;
     height: 25vh;
-    padding-top: 10vh;
     background-color: #FFFFFE;
+    text-align: start;
+    padding: 10vh 5vw 0 5vw;
 }
 
 #gradient-shadow {
@@ -543,7 +512,8 @@ header li:hover .highlight {
     text-decoration: underline;
 }
 
-.about-project p:hover .highlight {
+.about-project p:hover .highlight, 
+.about-project p:focus .highlight {
     background-size: 100% 100%;
 }
 
@@ -558,11 +528,13 @@ header li:hover .highlight {
     transition: all 1s;
 }
 
-.img-grid:hover .bkg-img {
+.img-grid:hover .bkg-img, 
+.img-grid:focus .bkg-img {
     opacity: 0.4;
 }
 
-.img-grid:hover .grid-link {
+.img-grid:hover .grid-link, 
+.img-grid:focus .grid-link {
     display: block;
 }
 
@@ -653,7 +625,8 @@ header li:hover .highlight {
     border-left: #00226B solid 3px;
 }
 
-#about-text:hover .highlight {
+#about-text:hover .highlight, 
+#about-text:focus .highlight {
     background-size: 100% 100%;
 }
 
@@ -731,9 +704,10 @@ header li:hover .highlight {
     justify-content: space-evenly;
     width: calc(100px + 8vw);
     height: calc(45px + 2vw);
-    background-color: #fffffe70;
+    background-color: #f8f8f8;
     border-radius: 10px;
     padding-left: 10px;
+    transition: all .5s ease; 
 }
 
 .skill-container h3 {
@@ -744,6 +718,11 @@ header li:hover .highlight {
 .skill-container img {
     width: calc(35px + 2vw);
     height: calc(35px + 2vw);
+}
+
+.skill-container:hover, 
+.skill-container:focus  {
+    transform: translate(5px, -5px);
 }
 
 .skills-info {
@@ -806,7 +785,8 @@ header li:hover .highlight {
     padding-bottom: 1rem;
 }
 
-#contact:hover .highlight {
+#contact:hover .highlight, 
+#contact:focus .highlight {
     background-size: 100% 100%;
     color:#011236;
 }
@@ -820,10 +800,16 @@ header li:hover .highlight {
 .contact-info {
     margin: calc(0.25rem + 1vw);
     width: calc(calc(0.25rem + 1vw)*5);
+    transition: all .5s;
 }
 
 .icon {
     height: calc(calc(0.25rem + 1vw)*3);
     width: calc(calc(0.25rem + 1vw)*3);
     border-radius: 10%;
+}
+
+.contact-info:hover, 
+.contact-info:focus {
+    transform: translate(5px, -5px);
 }
