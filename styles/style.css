@@ -389,13 +389,14 @@ header li:focus .highlight {
 
 @media (orientation: portrait) {
     #landing {
-        padding-bottom: 0;
+        padding-bottom: 10vh;
+        margin-bottom: 10vh;
     }
 
     #landing-top {
         flex-direction: column-reverse;     /* put doodle on top*/
-        justify-content: center;
         height: calc(100vh - 2.9rem);
+        width: 100%;
     }
 
     .split-screen {
@@ -411,7 +412,7 @@ header li:focus .highlight {
         height: 65vw;
         max-height: 40vh;
         padding-bottom: 0;
-        margin-bottom: 10vh;
+        margin-bottom: 5vh;
     }
 
     #doodle-circle {
@@ -472,7 +473,8 @@ header li:focus .highlight {
 #gradient-shadow {
     height: 10vh;
     width: 100%;
-    background: linear-gradient(180deg, #FFFFFE 0%, #FFFFFE00 100%);
+    background: linear-gradient(180deg, #FFFFFE 0%, #FFFFFE00 100%),
+                linear-gradient(180deg, #FFFFFE 0%, #FFFFFE00 60%);
 }
 
 #projects-col {
@@ -493,6 +495,7 @@ header li:focus .highlight {
 }
 
 .about-project {
+    position: -webkit-sticky;
     position: sticky;
     width: 45vw;
     height: 35vh; 
