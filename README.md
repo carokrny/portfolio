@@ -1,5 +1,7 @@
 # Portfolio
 
+[![Screenshot of portfolio website landing page](./media/landing/landing_screenshot.png)](carolynkearney.me)
+
 ## Table of contents
 * [General information](#general-information)
 * [Technologies](#technologies)
